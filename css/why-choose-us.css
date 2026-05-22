@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.root{
+    width: 100%;
+    height: auto; 
+    margin-bottom: 0;
+    background-color: azure;
+}
+
+.root h2 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+
+.bottom_div{
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+    
+    
+}
+
+.img_div{
+    width: 50%;
+    height: auto; 
+    flex: 1; 
+    text-align: right;
+    align-items: center;
+    display: flex; 
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 50px;
+
+}
+
+.img_div img{
+    width: 60%;
+}
+
+.ttext_divs{
+    width: 50%;
+    height: auto;
+    text-align: left;
+
+}
+
+.ttext_div{
+    margin-bottom: 15px;
+    width: 80%;
+}
+.ttext_div h6{
+    font-size: 16px;
+}
+
+
+/* 屏幕宽度小于 768px 时，改为上下堆叠 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 改为垂直排列 */
+  }
+  .div-left,
+  .div-right {
+    width: 100%; /* 占满整行 */
+  }
+}

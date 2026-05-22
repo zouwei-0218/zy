@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #000000;
+}
+
+.section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.section h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.section p.description {
+    font-size: 16px;
+    color: #494747;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    width: 250px;
+    min-height: 250px;
+    /* height: auto; */
+    color: #000000;
+    border-radius: 12px;
+    padding: 20px;
+    padding-top: 0;
+    box-shadow: 0 6px 15px rgba(165, 164, 164, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    justify-content: start;
+    
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(217, 216, 216, 0.4);
+}
+
+.card h2, .card p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    margin-top: 0;
+
+    
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h6{
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    text-align: left;
+    color: rgb(16, 32, 208);
+    margin-bottom: 10px;
+
+}
+
+/* 移动端自适应 */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

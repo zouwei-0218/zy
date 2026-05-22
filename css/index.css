@@ -1,0 +1,271 @@
+/* ========================= */
+/* 全局变量与基础样式 */
+/* ========================= */
+:root {
+    --primary-color: #00a8a0;
+    --font-family: 'Roboto', sans-serif;
+    --text-color: #333;
+    --background-color: #f9f7f7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========================= */
+/* Header 样式 */
+/* ========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    background: #f9f7f7;
+    font-family: Arial, sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 50px;
+    margin: 0;
+}
+
+.main-nav li {
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.first{
+    margin-left: 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2aa1a0;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  background: #2aa1a0;
+  color: #fff;
+}
+
+/* 下拉菜单 */
+.has-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+
+.has-dropdown:hover .dropdown {
+  display: flex;
+}
+
+.dropdown li a {
+  background: #2aa1a0;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.dropdown li a:hover {
+  background: #21807d;
+}
+
+.btn-quote {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 0;
+}
+
+.btn-quote:hover {
+    background-color: #00897a;
+}
+
+/* 倒三角 */
+.has-dropdown > a::after {
+  content: '▼';
+  font-size: 0.6em;
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+/* 鼠标悬停时变成正三角 */
+.has-dropdown:hover > a::after {
+  content: '▲';
+}
+
+/* ========================= */
+/* iframe 样式 */
+/* ========================= */
+
+
+.embedded-section{
+    display:block; 
+    margin: 0 auto;
+    width: 100%; 
+    height: auto;
+    align-items: center;
+    border: 0;
+
+}
+
+
+/* Why Choose Us 样式 */
+.section-why-choose {
+    padding: 80px 50px;
+    background-color: #fff;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.why-choose-image {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.why-choose-content {
+    flex: 2;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.why-choose-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.why-choose-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-content li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+
+/* Footer 样式 */
+footer {
+    background-color: #fff8f8;
+    color: #00897a;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-map {
+    /* flex: 1; */
+    min-width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+    .section-why-choose {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .banner h1 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+}
+
+/* 滚动动画显示类 */
+.animate {
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+}
