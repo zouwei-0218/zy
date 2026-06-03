@@ -1,0 +1,262 @@
+/**
+ * ============================================
+ * Foshan ZY Furniture - 预约参观页样式表
+ * ============================================
+ * 说明：此文件包含预约参观页特有的样式
+ * 依赖：需要先引入 common.css
+ * ============================================
+ */
+
+/* ============================================
+ * 1. Hero 区域
+ * ============================================
+ */
+.book-hero {
+    position: relative;
+    padding: calc(70px + var(--space-2xl)) 0 var(--space-2xl);
+    background-color: #f8fafc;
+    color: #1e293b;
+    text-align: center;
+}
+
+.book-hero-title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-md);
+    color: #1e293b;
+}
+
+.book-hero-desc {
+    font-size: var(--text-base);
+    color: #64748b;
+    line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+ * 2. 预约表单区域
+ * ============================================
+ */
+.booking-section {
+    padding: 0 0 20px;
+    background-color: #f8fafc;
+}
+
+.booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.booking-card {
+    background-color: transparent;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.booking-form {
+    padding: 0;
+}
+
+.booking-form-single {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-2xl);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: var(--space-lg);
+}
+
+/* ============================================
+ * 3. 表单字段
+ * ============================================
+ */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: var(--space-sm);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--text-base);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: var(--bg-white);
+    transition: border-color var(--transition-fast);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-select {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--text-base);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: var(--bg-white);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+    color: #64748b;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--text-base);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: var(--bg-white);
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ============================================
+ * 6. 提交按钮
+ * ============================================
+ */
+.submit-section {
+    margin-top: 0;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: var(--space-lg);
+    background-color: #1e40af;
+    color: var(--bg-white);
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.submit-btn:hover {
+    background-color: #1e3a8a;
+}
+
+/* ============================================
+ * 7. 预约须知
+ * ============================================
+ */
+.booking-notice {
+    margin-top: 0;
+    /* margin-bottom: var(--space-2xl); */
+    background-color: #fef9c3;
+    border-radius: 8px;
+    padding: var(--space-lg);
+}
+
+.notice-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: #92400e;
+    margin-bottom: var(--space-md);
+}
+
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-list li {
+    position: relative;
+    padding-left: var(--space-lg);
+    font-size: var(--text-sm);
+    color: #78350f;
+    line-height: 1.8;
+}
+
+.notice-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #f59e0b;
+    border-radius: 50%;
+}
+
+/* ============================================
+ * 8. 响应式设计
+ * ============================================
+ */
+
+/* 移动设备 */
+@media (max-width: 767px) {
+    .book-hero {
+        padding: calc(70px + var(--space-xl)) 0 var(--space-xl);
+    }
+    
+    .book-hero-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .booking-container {
+        max-width: 100%;
+        padding: 0 var(--space-lg);
+    }
+    
+    .booking-form-single {
+        padding: var(--space-lg);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}

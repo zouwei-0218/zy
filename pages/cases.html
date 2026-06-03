@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- ============================================
+         页面基础信息
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="探索Foshan ZY Furniture的成功案例 - 酒店、办公、住宅等多元化家具解决方案">
+    <meta name="keywords" content="项目案例,家具案例,酒店家具,办公家具,住宅家具">
+    <title>项目案例 | Foshan ZY Furniture Co., Ltd.</title>
+    
+    <!-- ============================================
+         样式表引入
+         ============================================ -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cases.css">
+</head>
+<body>
+    <!-- ============================================
+         导航栏
+         ============================================ -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#1a5f9e"/>
+                    <path d="M10 20L20 10L30 20L20 30L10 20Z" fill="white"/>
+                </svg> -->
+                <img src="../static/images/logo1.png" width="40" height="40" alt="Foshan ZY Furniture Logo"/>
+                <span>Foshan ZY Furniture Co., Ltd.</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="打开菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="navbar-nav">
+                <a href="../index.html">Home</a>
+                <a href="./cases.html" class="active">Cases</a>
+                <a href="./products.html">Products</a>
+                <a href="./about.html">About us</a>
+                <a href="./contact.html">Contact us</a>
+                <button class="btn btn-primary" onclick="toWhatsApp()">Whatsapp</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         主内容区域
+         ============================================ -->
+    <main>
+        <!-- ============================================
+             页面头部区域
+             ============================================ -->
+        <section class="cases-header">
+            <div class="container">
+                <span class="cases-header-badge">Our Portfolio</span>
+                <h1 class="cases-header-title">Featured Projects</h1>
+                <p class="cases-header-desc">
+                    Discover our portfolio of exceptional furniture solutions. From luxury hotels to modern offices, we bring your vision to life with craftsmanship and innovation.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             案例筛选区域
+             ============================================ -->
+        <section class="cases-filter">
+            <div class="container">
+                <div class="filter-container">
+                    <span class="filter-label">Filter by:</span>
+                    <div class="filter-list">
+                        <button class="filter-item active" data-filter="all">All Projects</button>
+                        <button class="filter-item" data-filter="hotel">Hotel</button>
+                        <button class="filter-item" data-filter="office">Office</button>
+                        <button class="filter-item" data-filter="residential">Residential</button>
+                        <button class="filter-item" data-filter="commercial">Commercial</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             案例展示区域
+             ============================================ -->
+        <section class="cases-section">
+            <div class="container">
+                <div class="cases-grid">
+                    <!-- 案例1：酒店项目 -->
+                    <div class="case-card" data-category="hotel" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" 
+                                 alt="Grand Hyatt Hotel Project" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Hotel</span>
+                            <h3 class="case-title">Grand Hyatt Hotel Dubai</h3>
+                            <p class="case-desc">Complete furniture solution for 380 luxury rooms and suites, including custom headboards, wardrobes, and lounge areas.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Dubai, UAE</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例2：办公项目 -->
+                    <div class="case-card" data-category="office" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" 
+                                 alt="TechCorp Headquarters" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Office</span>
+                            <h3 class="case-title">TechCorp Headquarters</h3>
+                            <p class="case-desc">Modern office furniture for a 15,000 sqm tech campus, featuring ergonomic workstations and collaborative spaces.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Shenzhen, China</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例3：住宅项目 -->
+                    <div class="case-card" data-category="residential" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" 
+                                 alt="Luxury Villa Collection" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Residential</span>
+                            <h3 class="case-title">Luxury Villa Collection</h3>
+                            <p class="case-desc">Bespoke furniture for 12 exclusive villas, combining Italian design with local craftsmanship and premium materials.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Singapore</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例4：商业项目 -->
+                    <div class="case-card" data-category="commercial" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" 
+                                 alt="Metro Shopping Mall" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Commercial</span>
+                            <h3 class="case-title">Metro Shopping Mall</h3>
+                            <p class="case-desc">Custom seating and display fixtures for a 50,000 sqm retail space, designed for high-traffic durability.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Bangkok, Thailand</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例5：酒店项目 -->
+                    <div class="case-card" data-category="hotel" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" 
+                                 alt="Marriott Resort & Spa" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Hotel</span>
+                            <h3 class="case-title">Marriott Resort & Spa</h3>
+                            <p class="case-desc">Beachfront resort furniture including outdoor loungers, poolside daybeds, and tropical-themed room interiors.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Phuket, Thailand</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例6：办公项目 -->
+                    <div class="case-card" data-category="office" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600" 
+                                 alt="Finance Tower" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Office</span>
+                            <h3 class="case-title">Finance Tower Executive Suites</h3>
+                            <p class="case-desc">Executive office furniture for 45 floors of premium commercial space, featuring imported leather and marble accents.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Hong Kong</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例7：住宅项目 -->
+                    <div class="case-card" data-category="residential" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" 
+                                 alt="Skyline Penthouse" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Residential</span>
+                            <h3 class="case-title">Skyline Penthouse Collection</h3>
+                            <p class="case-desc">Ultra-luxury furniture for high-rise penthouses, featuring panoramic views integration and smart home compatibility.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Kuala Lumpur</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例8：商业项目 -->
+                    <div class="case-card" data-category="commercial" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" 
+                                 alt="Gourmet Restaurant Chain" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Commercial</span>
+                            <h3 class="case-title">Gourmet Restaurant Chain</h3>
+                            <p class="case-desc">Custom dining furniture for 28 restaurant locations, designed for comfort, durability, and brand consistency.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Multiple Cities</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 案例9：酒店项目 -->
+                    <div class="case-card" data-category="hotel" data-animate>
+                        <div class="case-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600" 
+                                 alt="Boutique Hotel Collection" 
+                                 class="case-image"
+                                 loading="lazy">
+                            <div class="case-overlay">
+                                <span class="case-view-btn">
+                                    View Project
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="case-category">Hotel</span>
+                            <h3 class="case-title">Boutique Hotel Collection</h3>
+                            <p class="case-desc">Unique furniture designs for 8 boutique hotels, each with distinct character while maintaining quality standards.</p>
+                            <div class="case-meta">
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Tokyo, Japan</span>
+                                </div>
+                                <div class="case-meta-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             统计数据区域
+             ============================================ -->
+        <section class="cases-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-animate>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card" data-animate>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">350+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card" data-animate>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div class="stat-card" data-animate>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CTA 区域
+             ============================================ -->
+        <section class="cases-cta">
+            <div class="container">
+                <h2 class="cases-cta-title">Have a Project in Mind?</h2>
+                <p class="cases-cta-text">Let's discuss how we can bring your furniture vision to life with our expertise and craftsmanship.</p>
+                <div class="cases-cta-actions">
+                    <a href="./contact.html" class="btn btn-white btn-lg">Start Your Project</a>
+                    <a href="./products.html" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">View Products</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         页脚
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- 公司信息列 -->
+                <div>
+                    <div class="footer-brand-container">
+                        <img src="../static/images/logo1.png" width="40" height="20" alt="Foshan ZY Furniture Logo"/>
+                        <div class="footer-brand">Foshan ZY Furniture Co., Ltd.</div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            
+                            <div>
+                                <div>EmailL：sales@foshanfly.co</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <div>Phone：+86 13751813255 (Wechat & Whatsapp)</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <div>Address：1400 Defense Pentagon, Washington, DC 20301-1400</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 二维码 -->
+                    <!-- <div class="footer-qr">
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <span>微信二维码</span>
+                        </div>
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <span>产品目录</span>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <!-- 快速导航列 -->
+                <div>
+                    <h4 class="footer-title">Quick Navigation</h4>
+                    <nav class="footer-links">
+                        <a href="../index.html">Home</a>
+                        <a href="./cases.html">Cases</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./about.html">About us</a>
+                        <a href="./contact.html">Contact us</a>
+                        <a href="./book.html">Book a visit</a>
+                    </nav>
+                </div>
+                
+                <!-- 位置列 -->
+                <div class="footer-location">
+                    <h4 class="footer-title">LOCATION</h4>
+                    <div class="footer-map">
+                        <!-- 地图占位图 -->
+                        <iframe 
+                                width="100%" 
+                                height="100%"
+                                style="border:0;"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=22.94654229723234,113.0897925914599&z=15&hl=zh-CN&output=embed">
+                        </iframe>
+
+                        <!-- <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 8px; right: 8px; background: rgba(0,0,0,0.7); padding: 8px; border-radius: 4px; font-size: 12px; text-align: center;">
+                            点击查看完整地图
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="footer-bottom">
+                <p>© 2026 Foshan ZY Furniture Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JavaScript 引入
+         ============================================ -->
+    <script src="../js/common.js"></script>
+    <script src="../js/cases.js"></script>
+</body>
+</html>

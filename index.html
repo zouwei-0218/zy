@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- ============================================
+         页面基础信息
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="佛山市飞杨设备有限公司 - 引领工业自动化的核心技术，为全球制造业注入动力">
+    <meta name="keywords" content="工业自动化,机械设备,智能制造,佛山飞杨">
+    <title>Foshan Fly Equipment</title>
+    
+    <!-- ============================================
+         样式表引入
+         ============================================ -->
+    <!-- 公共样式：包含变量定义、重置样式、工具类、导航栏、页脚等 -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <!-- 首页特有样式：Hero区域、服务卡片等 -->
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+</head>
+<body>
+    <!-- ============================================
+         导航栏
+         ============================================
+         固定在页面顶部，包含品牌Logo、导航链接和CTA按钮
+         移动端会显示汉堡菜单按钮
+         ============================================ -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <!-- 品牌Logo -->
+            <a href="./index.html" class="navbar-brand">
+                <!-- Logo图标：使用SVG内联，确保快速加载 -->
+                <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" src="./static/images/logo.png">
+                    <rect width="40" height="40" rx="4" fill="#1a5f9e"/>
+                    <path d="M10 20L20 10L30 20L20 30L10 20Z" fill="white"/>
+                </svg> -->
+                <img src="./static/images/logo1.png" alt="Foshan ZY Furniture Logo"/>
+                <span>Foshan ZY Furniture Co., Ltd.</span>
+            </a>
+            
+            <!-- 移动端菜单切换按钮 -->
+            <button class="navbar-toggle" aria-label="打开菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- 导航链接 -->
+            <nav class="navbar-nav">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./pages/cases.html">Cases</a>
+                <a href="./pages/products.html">Products</a>
+                <a href="./pages/about.html">About us</a>
+                <a href="./pages/contact.html">Contact us</a>
+                <button class="btn btn-primary" onclick="toWhatsApp()">Whatsapp</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         主内容区域
+         ============================================ -->
+    <main>
+        <!-- ============================================
+             Hero 主视觉区域
+             ============================================
+             全屏背景图展示工业场景
+             包含主标题、描述和CTA按钮
+             ============================================ -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- 小标签 -->
+                <span class="hero-badge">工程卓越 · 全球信赖</span>
+                
+                <!-- 主标题 -->
+                <h1 class="hero-title">
+                    引领工业自动化的<br>
+                    <span>核心技术</span>
+                </h1>
+                
+                <!-- 描述文字 -->
+                <p class="hero-description">
+                    佛山市飞杨设备有限公司致力于为您提供最尖端的工业设备解决方案。我们以精度为本，为全球制造业注入动力。
+                </p>
+                
+                <!-- 操作按钮组 -->
+                <div class="hero-actions">
+                    <a href="./pages/products.html" class="btn btn-white btn-lg">
+                        查看产品目录
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="./pages/about.html" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">
+                        了解我们
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 滚动提示 -->
+            <div class="hero-scroll">
+                <span>向下滚动</span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             What We Do 服务区域
+             ============================================
+             展示公司的核心业务领域
+             使用卡片式布局，左侧大图+右侧两个小卡片
+             ============================================ -->
+        <section class="services">
+            <div class="container">
+                <!-- 区域标题 -->
+                <header class="services-header">
+                    <h2 class="services-title">What we do</h2>
+                </header>
+                
+                <!-- 服务卡片网格 -->
+                <div class="services-grid">
+                    <!-- 左侧大图卡片：工业机械臂 -->
+                    <div class="service-card-large" data-animate>
+                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800" 
+                             alt="工业机械臂" 
+                             class="service-image"
+                             loading="lazy">
+                    </div>
+                    
+                    <!-- 右侧上方卡片：协作机器人 -->
+                    <div class="service-card" data-animate>
+                        <div>
+                            <div class="service-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title">协作机器人</h3>
+                            <p class="service-card-desc">灵活部署，提升人机协同作业效率。</p>
+                        </div>
+                        <div class="service-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧下方卡片：定制化产线 -->
+                    <div class="service-card" data-animate>
+                        <div>
+                            <div class="service-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title">定制化产线</h3>
+                            <p class="service-card-desc">为您企业量身打造的全自动生产流程。</p>
+                        </div>
+                        <div class="service-card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         页脚
+         ============================================
+         包含公司信息、快速导航、位置地图和二维码
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- 公司信息列 -->
+                <div>
+                    <div class="footer-brand-container">
+                        <img src="./static/images/logo1.png"alt="Foshan ZY Furniture Logo"/>
+                        <div class="footer-brand">Foshan ZY Furniture Co., Ltd.</div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="6" width="20" height="16" rx="2"/>
+                                <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            
+                            <div>
+                                <div>EmailL：sales@foshanfly.co</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <div>Phone：+86 13751813255 (Wechat & Whatsapp)</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <div>Address：1400 Defense Pentagon, Washington, DC 20301-1400</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 二维码 -->
+                    <!-- <div class="footer-qr">
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <span>微信二维码</span>
+                        </div>
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <span>产品目录</span>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <!-- 快速导航列 -->
+                <div>
+                    <h4 class="footer-title">Quick Navigation</h4>
+                    <nav class="footer-links">
+                        <a href="./index.html">Home</a>
+                        <a href="./pages/cases.html">Cases</a>
+                        <a href="./pages/products.html">Products</a>
+                        <a href="./pages/about.html">About us</a>
+                        <a href="./pages/contact.html">Contact us</a>
+                        <a href="./pages/book.html">Book a visit</a>
+                    </nav>
+                </div>
+                
+                <!-- 位置列 -->
+                <div class="footer-location">
+                    <h4 class="footer-title">LOCATION</h4>
+                    <div class="footer-map">
+                        <!-- 地图占位图 -->
+                        <iframe 
+                                width="100%" 
+                                height="100%"
+                                style="border:0;"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=22.94654229723234,113.0897925914599&z=15&hl=zh-CN&output=embed">
+                        </iframe>
+
+                        <!-- <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 8px; right: 8px; background: rgba(0,0,0,0.7); padding: 8px; border-radius: 4px; font-size: 12px; text-align: center;">
+                            点击查看完整地图
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="footer-bottom">
+                <p>© 2026 Foshan ZY Furniture Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JavaScript 引入
+         ============================================ -->
+    <!-- 公共JavaScript：导航栏、移动端菜单、滚动效果等 -->
+    <script src="./js/common.js"></script>
+    <!-- 首页特有JavaScript -->
+    <script src="./js/home.js"></script>
+</body>
+</html>

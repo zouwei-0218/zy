@@ -1,0 +1,368 @@
+/**
+ * ============================================
+ * Foshan Fly Equipment - 产品展示页样式表
+ * ============================================
+ * 说明：此文件包含产品展示页特有的样式
+ * 依赖：需要先引入 common.css
+ * ============================================
+ */
+
+/* ============================================
+ * 1. 页面头部区域
+ * ============================================
+ */
+.products-header {
+    padding: calc(70px + var(--space-3xl)) 0 var(--space-2xl);
+    background-color: var(--bg-white);
+}
+
+.products-header-title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.products-header-desc {
+    font-size: var(--text-base);
+    color: var(--text-light);
+    max-width: 600px;
+    line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+ * 2. 产品内容区域布局
+ * ============================================
+ */
+.products-content {
+    padding: var(--space-xl) 0 var(--space-3xl);
+    background-color: var(--bg-white);
+}
+
+.products-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-2xl);
+}
+
+/* ============================================
+ * 3. 左侧边栏 - 分类和CTA
+ * ============================================
+ */
+.products-sidebar {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+.sidebar-section {
+    margin-bottom: var(--space-xl);
+}
+
+.sidebar-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-md);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.category-item:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+.category-item.active {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.category-arrow {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
+
+.category-item.active .category-arrow {
+    opacity: 1;
+}
+
+/* CTA卡片 */
+.sidebar-cta {
+    background-color: var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    color: var(--bg-white);
+}
+
+.sidebar-cta-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.sidebar-cta-text {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+    margin-bottom: var(--space-lg);
+    line-height: var(--leading-relaxed);
+}
+
+.sidebar-cta-btn {
+    width: 100%;
+    padding: var(--space-md);
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-cta-btn:hover {
+    background-color: var(--bg-light);
+}
+
+/* ============================================
+ * 4. 产品网格
+ * ============================================
+ */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.product-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.product-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.product-image-wrapper {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: var(--space-lg);
+}
+
+.product-category {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-sm);
+}
+
+.product-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--space-md);
+    line-height: var(--leading-tight);
+}
+
+.product-specs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+}
+
+.spec-label {
+    color: var(--text-light);
+}
+
+.spec-value {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.product-btn {
+    width: 100%;
+    padding: var(--space-md);
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.product-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================
+ * 5. 分页
+ * ============================================
+ */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-2xl);
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-white);
+    color: var(--text-medium);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.pagination-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+    color: var(--text-muted);
+    padding: 0 var(--space-sm);
+}
+
+/* ============================================
+ * 6. 响应式设计
+ * ============================================
+ */
+
+/* 平板设备 */
+@media (max-width: 991px) {
+    .products-layout {
+        grid-template-columns: 200px 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-header-title {
+        font-size: var(--text-3xl);
+    }
+}
+
+/* 移动设备 */
+@media (max-width: 767px) {
+    .products-header {
+        padding: calc(70px + var(--space-2xl)) 0 var(--space-xl);
+    }
+    
+    .products-header-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .products-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-sidebar {
+        position: static;
+        order: -1;
+    }
+    
+    .category-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+    
+    .category-item {
+        white-space: nowrap;
+    }
+    
+    .sidebar-cta {
+        display: none;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-image-wrapper {
+        aspect-ratio: 16/9;
+    }
+}
+
+/* 小屏移动设备 */
+@media (max-width: 575px) {
+    .product-content {
+        padding: var(--space-md);
+    }
+    
+    .product-name {
+        font-size: var(--text-base);
+    }
+}

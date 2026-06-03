@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- ============================================
+         页面基础信息
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="探索佛山市飞杨设备有限公司的精密工程解决方案 - CNC系统、机械臂、自动化产线、激光切割设备">
+    <meta name="keywords" content="工业设备,CNC系统,机械臂,自动化产线,激光切割">
+    <title>产品展示 | Foshan Fly Equipment</title>
+    
+    <!-- ============================================
+         样式表引入
+         ============================================ -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <!-- ============================================
+         导航栏
+         ============================================ -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="4" fill="#1a5f9e"/>
+                    <path d="M10 20L20 10L30 20L20 30L10 20Z" fill="white"/>
+                </svg> -->
+                <img src="../static/images/logo1.png" width="40" height="40" alt="Foshan ZY Furniture Logo"/>
+                <span>Foshan ZY Furniture Co., Ltd.</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="打开菜单" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="navbar-nav">
+                <a href="../index.html">Home</a>
+                <a href="./cases.html">Cases</a>
+                <a href="./products.html" class="active">Products</a>
+                <a href="./about.html">About us</a>
+                <a href="./contact.html">Contact us</a>
+                <button class="btn btn-primary" onclick="toWhatsApp()">Whatsapp</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         主内容区域
+         ============================================ -->
+    <main>
+        <!-- ============================================
+             页面头部区域
+             ============================================ -->
+        <section class="products-header">
+            <div class="container">
+                <h1 class="products-header-title">Precision Engineering Solutions</h1>
+                <p class="products-header-desc">
+                    Elevate your manufacturing efficiency with our world-class industrial automation equipment. Engineered for reliability, designed for the future.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             产品内容区域
+             ============================================ -->
+        <section class="products-content">
+            <div class="container">
+                <div class="products-layout">
+                    <!-- 左侧边栏 -->
+                    <aside class="products-sidebar">
+                        <!-- 分类列表 -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Categories</h3>
+                            <div class="category-list">
+                                <div class="category-item active">
+                                    <span>CNC Systems</span>
+                                    <svg class="category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18l6-6-6-6"/>
+                                    </svg>
+                                </div>
+                                <div class="category-item">
+                                    <span>Robotic Arms</span>
+                                    <svg class="category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18l6-6-6-6"/>
+                                    </svg>
+                                </div>
+                                <div class="category-item">
+                                    <span>Automated Lines</span>
+                                    <svg class="category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18l6-6-6-6"/>
+                                    </svg>
+                                </div>
+                                <div class="category-item">
+                                    <span>Laser Cutting</span>
+                                    <svg class="category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18l6-6-6-6"/>
+                                    </svg>
+                                </div>
+                                <div class="category-item">
+                                    <span>Control Units</span>
+                                    <svg class="category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18l6-6-6-6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA卡片 -->
+                        <div class="sidebar-cta">
+                            <h4 class="sidebar-cta-title">Need a custom solution?</h4>
+                            <p class="sidebar-cta-text">Our engineers can design bespoke automation systems tailored to your facility.</p>
+                            <button class="sidebar-cta-btn" onclick="window.location.href='contact.html'">Speak to an Expert</button>
+                        </div>
+                    </aside>
+
+                    <!-- 产品网格 -->
+                    <div class="products-main">
+                        <div class="products-grid">
+                            <!-- 产品1：CNC系统 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600" 
+                                         alt="X-Series 5-Axis Milling Center" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">CNC Systems</div>
+                                    <h3 class="product-name">X-Series 5-Axis Milling Center</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Precision:</span>
+                                            <span class="spec-value">±0.005mm</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">Spindle Speed:</span>
+                                            <span class="spec-value">12,000 RPM</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- 产品2：机械臂 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600" 
+                                         alt="Titan-R6 Heavy Payload Arm" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">Robotic Arms</div>
+                                    <h3 class="product-name">Titan-R6 Heavy Payload Arm</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Payload Cap:</span>
+                                            <span class="spec-value">150kg</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">Reach Radius:</span>
+                                            <span class="spec-value">2.8m</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- 产品3：控制单元 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" 
+                                         alt="SyncPro PLC Master Module" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">Control Units</div>
+                                    <h3 class="product-name">SyncPro PLC Master Module</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Processing:</span>
+                                            <span class="spec-value">Dual-Core 1.5GHz</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">I/O Points:</span>
+                                            <span class="spec-value">Up to 2048</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- 产品4：激光系统 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600" 
+                                         alt="OptiCut 6000 Fiber Laser" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">Laser Systems</div>
+                                    <h3 class="product-name">OptiCut 6000 Fiber Laser</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Output Power:</span>
+                                            <span class="spec-value">6000W</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">Max Thickness:</span>
+                                            <span class="spec-value">25mm Steel</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- 产品5：自动化产线 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600" 
+                                         alt="FlexFlow Modular Conveyor" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">Automated Lines</div>
+                                    <h3 class="product-name">FlexFlow Modular Conveyor</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Max Speed:</span>
+                                            <span class="spec-value">60m/min</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">Load Cap:</span>
+                                            <span class="spec-value">500kg/m</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- 产品6：HMI触摸屏 -->
+                            <div class="product-card" data-animate>
+                                <div class="product-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" 
+                                         alt="VisionLink 15\" HMI Touch" 
+                                         class="product-image"
+                                         loading="lazy">
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-category">Control Units</div>
+                                    <h3 class="product-name">VisionLink 15" HMI Touch</h3>
+                                    <div class="product-specs">
+                                        <div class="spec-row">
+                                            <span class="spec-label">Display:</span>
+                                            <span class="spec-value">4K UHD IPS</span>
+                                        </div>
+                                        <div class="spec-row">
+                                            <span class="spec-label">Rating:</span>
+                                            <span class="spec-value">IP66 Waterproof</span>
+                                        </div>
+                                    </div>
+                                    <button class="product-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 分页 -->
+                        <nav class="pagination" aria-label="产品分页">
+                            <button class="pagination-btn" disabled aria-label="上一页">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <span class="pagination-ellipsis">...</span>
+                            <button class="pagination-btn">12</button>
+                            <button class="pagination-btn" aria-label="下一页">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         页脚
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- 公司信息列 -->
+                <div>
+                    <div class="footer-brand-container">
+                        <img src="../static/images/logo1.png" width="40" height="20" alt="Foshan ZY Furniture Logo"/>
+                        <div class="footer-brand">Foshan ZY Furniture Co., Ltd.</div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            
+                            <div>
+                                <div>EmailL：sales@foshanfly.co</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <div>Phone：+86 13751813255 (Wechat & Whatsapp)</div>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <div>Address：1400 Defense Pentagon, Washington, DC 20301-1400</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 二维码 -->
+                    <!-- <div class="footer-qr">
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <span>微信二维码</span>
+                        </div>
+                        <div class="footer-qr-item">
+                            <div style="width: 80px; height: 80px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="1.5">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                            </div>
+                            <span>产品目录</span>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <!-- 快速导航列 -->
+                <div>
+                    <h4 class="footer-title">Quick Navigation</h4>
+                    <nav class="footer-links">
+                        <a href="../index.html">Home</a>
+                        <a href="./cases.html">Cases</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./about.html">About us</a>
+                        <a href="./contact.html">Contact us</a>
+                        <a href="./book.html">Book a visit</a>
+                    </nav>
+                </div>
+                
+                <!-- 位置列 -->
+                <div class="footer-location">
+                    <h4 class="footer-title">LOCATION</h4>
+                    <div class="footer-map">
+                        <!-- 地图占位图 -->
+                        <iframe 
+                                width="100%" 
+                                height="100%"
+                                style="border:0;"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=22.94654229723234,113.0897925914599&z=15&hl=zh-CN&output=embed">
+                        </iframe>
+
+                        <!-- <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 8px; right: 8px; background: rgba(0,0,0,0.7); padding: 8px; border-radius: 4px; font-size: 12px; text-align: center;">
+                            点击查看完整地图
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="footer-bottom">
+                <p>© 2026 Foshan ZY Furniture Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JavaScript 引入
+         ============================================ -->
+    <script src="../js/common.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>
