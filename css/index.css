@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, rgba(13, 74, 124, 0.3) 0%, rgba(26, 95, 158, 0.3) 100%),
-                url('../static/images/George-Showroom.webp') center/cover no-repeat;
+                url('../static/images/George-Showroom.png') center/cover no-repeat;
     padding-top: 70px; /* 为固定导航栏留出空间 */
 }
 
