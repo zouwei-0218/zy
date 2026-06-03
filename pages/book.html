@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <!-- ============================================
          页面基础信息
@@ -57,9 +57,9 @@
              ============================================ -->
         <section class="book-hero">
             <div class="container">
-                <h1 class="book-hero-title">预约参观</h1>
+                <h1 class="book-hero-title">Schedule a visit</h1>
                 <p class="book-hero-desc">
-                    预约参观我们的展厅，体验高品质家具
+                    Schedule a visit to our showroom to experience our high-quality furniture.
                 </p>
             </div>
             
@@ -72,12 +72,12 @@
             <div class="container">
                 <div class="booking-container">
                     <div class="booking-notice">
-                        <h4 class="notice-title">预约须知</h4>
+                        <h4 class="notice-title">Reservation Notice:</h4>
                         <ul class="notice-list">
-                            <li>请提前至少1天预约参观</li>
-                            <li>参观时间为周一至周六</li>
-                            <li>请携带有效身份证件</li>
-                            <li>如需取消预约，请提前电话通知</li>
+                            <li>Advance booking of at least 1 day is required.</li>
+                            <li>Open for visits: Mon–Fri.</li>
+                            <li>Valid ID required.</li>
+                            <li>To cancel, please notify us by phone in advance.</li>
                         </ul>
                     </div>
                     <div class="booking-card">
@@ -90,62 +90,62 @@
                                     <!-- 姓名和电话并排 -->
                                     <div class="form-row">
                                         <div class="form-group">
-                                            <label class="form-label" for="fullName">姓名</label>
-                                            <input type="text" id="fullName" name="fullName" class="form-input" placeholder="" required>
+                                            <label class="form-label" for="user_name">Full Name</label>
+                                            <input type="text" id="user_name" name="user_name" class="form-input" placeholder="Enter your name" required>
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label" for="phone">电话</label>
-                                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="" required>
+                                            <label class="form-label" for="user_phone">Phone</label>
+                                            <input type="tel" id="user_phone" name="user_phone" class="form-input" placeholder="Enter your phone" required>
                                         </div>
                                     </div>
                                     
                                     <!-- 邮箱 -->
                                     <div class="form-group full-width">
-                                        <label class="form-label" for="email">邮箱</label>
-                                        <input type="email" id="email" name="email" class="form-input" placeholder="" required>
+                                        <label class="form-label" for="user_email">Email</label>
+                                        <input type="email" id="user_email" name="user_email" class="form-input" placeholder="Enter your email" required>
                                     </div>
                                     
                                     <!-- 参观人数 -->
                                     <div class="form-group">
-                                        <label class="form-label" for="visitors">参观人数</label>
-                                        <select id="visitors" name="visitors" class="form-select" required>
-                                            <option value="" disabled selected>请选择</option>
-                                            <option value="1">1人</option>
-                                            <option value="2">2人</option>
-                                            <option value="3">3人</option>
-                                            <option value="4">4人</option>
-                                            <option value="5-10">5-10人</option>
-                                            <option value="10+">10人以上</option>
+                                        <label class="form-label" for="user_people">Number of Visitors</label>
+                                        <select id="user_people" name="user_people" class="form-select" required>   
+                                            <option value="" disabled selected>Choose</option>
+                                            <option value="1">1 Person</option>
+                                            <option value="2">2 Persons</option>
+                                            <option value="3">3 Persons</option>
+                                            <option value="4">4 Persons</option>
+                                            <option value="5-10">5-10 Persons</option>
+                                            <option value="10+">10+ Persons</option>
                                         </select>
                                     </div>
                                     
                                     <!-- 预约日期 -->
                                     <div class="form-group">
-                                        <label class="form-label" for="selectedDate">预约日期</label>
-                                        <input type="date" id="selectedDate" name="date" class="form-input" required>
+                                        <label class="form-label" for="user_day">Appointment Date</label>
+                                        <input type="date" id="user_day" name="user_day" class="form-input" lang="en" required>
                                     </div>
                                     
                                     <!-- 参观时间段 -->
                                     <div class="form-group full-width">
-                                        <label class="form-label" for="selectedTime">参观时间段</label>
-                                        <select id="selectedTime" name="time" class="form-select" required>
-                                            <option value="" disabled selected>请选择</option>
-                                            <option value="morning">上午 (08:30 - 12:00)</option>
-                                            <option value="afternoon">下午 (14:00 - 18:00)</option>
+                                        <label class="form-label" for="user_time">Visit Time Slot</label>
+                                        <select id="user_time" name="user_time" class="form-select" required>
+                                            <!-- <option value="" disabled selected>Choose</option> -->
+                                            <option value="(08:30 - 12:00) AM" selected>(08:30 - 12:00) AM</option>
+                                            <option value="(14:00 - 18:00) PM">(14:00 - 18:00) PM</option>
                                         </select>
                                     </div>
                                     
                                     <!-- 备注信息 -->
                                     <div class="form-group full-width">
-                                        <label class="form-label" for="purpose">留言</label>
-                                        <textarea id="purpose" name="purpose" class="form-textarea" placeholder=""></textarea>
+                                        <label class="form-label" for="user_message">Message</label>
+                                        <textarea id="user_message" name="user_message" class="form-textarea" placeholder="Enter your message"></textarea>
                                     </div>
                                 </div>
                                 
                                 <!-- 提交按钮 -->
                                 <div class="submit-section">
                                     <button type="submit" class="submit-btn">
-                                        提交预约
+                                        Submit Reservation
                                     </button>
                                 </div>
                                 
@@ -277,5 +277,6 @@
          ============================================ -->
     <script src="../js/common.js"></script>
     <script src="../js/book.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>

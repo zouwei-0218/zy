@@ -69,11 +69,11 @@
     gap: var(--space-lg);
 }
 
-.form-row {
+/* .form-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-}
+} */
 
 .form-group {
     display: flex;
@@ -91,7 +91,7 @@
 
 .form-input {
     width: 100%;
-    padding: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     font-size: var(--text-base);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -162,6 +162,7 @@
     cursor: pointer;
     transition: background-color var(--transition-fast);
     width: fit-content;
+    margin-left: auto;
 }
 
 .submit-btn:hover {

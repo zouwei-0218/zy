@@ -33,12 +33,12 @@ function initContactForm() {
         event.preventDefault();
         
         // 获取表单数据
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        let formData = new FormData(form);
+        let data = Object.fromEntries(formData.entries());
         
         // 验证必填字段
         let isValid = true;
-        const requiredFields = ['fullName', 'email', 'inquiryType', 'message'];
+        const requiredFields = ['user_name', 'user_email', 'user_country', 'user_message'];
         
         requiredFields.forEach(function(field) {
             if (!data[field] || data[field].trim() === '') {
@@ -71,13 +71,36 @@ function initContactForm() {
         }
         
         // 模拟提交
-        showNotification('正在提交咨询...');
+        // 1. 初始化 Public Key
+        emailjs.init("zovN2ceDxO5PBgCrk"); 
+
+        // 监听表单提交事件
+        data.user_from = "中亿家具";
+        
+        // 调试：打印发送的数据
+        // console.log('发送的数据:', data);
+        
+        // 2. 调用 send 方法发送邮件
+        emailjs.send(
+            'service_gq4unos', 
+            'template_saszc21', 
+            data
+        )
+        .then(function(response) {
+            // console.log('邮件发送成功！', response.status, response.text);
+            form.reset();
+            alert('感谢您的留言，我们将尽快回复！');
+        }, function(error) {
+            // console.error('邮件发送失败：', error);
+            alert('发送失败，请稍后重试或检查网络。');
+        });
+
         
         // 模拟API调用
-        setTimeout(function() {
-            showNotification('咨询已提交！我们会尽快与您联系。');
-            form.reset();
-        }, 1500);
+        // setTimeout(function() {
+        //     showNotification('咨询已提交！我们会尽快与您联系。');
+        //     form.reset();
+        // }, 1500);
     });
     
     // 输入时移除错误样式

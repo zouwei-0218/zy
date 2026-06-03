@@ -196,12 +196,12 @@ function initFormValidation() {
         event.preventDefault();
         
         // 获取表单数据
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        let formData = new FormData(form);
+        let data = Object.fromEntries(formData.entries());
         
         // 验证必填字段
         let isValid = true;
-        const requiredFields = ['date', 'time', 'fullName', 'companyName', 'email', 'purpose'];
+        const requiredFields = [ 'user_name', 'user_phone', 'user_email', 'user_people', 'user_day', 'user_time', 'user_message'];
         
         requiredFields.forEach(function(field) {
             if (!data[field] || data[field].trim() === '') {
@@ -217,9 +217,9 @@ function initFormValidation() {
         });
         
         // 验证邮箱格式
-        if (data.email && !FoshanFlyUtils.FormValidator.isEmail(data.email)) {
+        if (data.user_email && !FoshanFlyUtils.FormValidator.isEmail(data.user_email)) {
             isValid = false;
-            const emailInput = document.getElementById('email');
+            const emailInput = document.getElementById('user_email');   
             if (emailInput) {
                 emailInput.style.borderColor = '#dc2626';
                 setTimeout(function() {
@@ -232,26 +232,32 @@ function initFormValidation() {
             showNotification('请填写所有必填字段');
             return;
         }
-        
+        data.user_from = "中亿家具";
+
         // 模拟提交
-        showNotification('正在提交预约请求...');
+        // 1. 初始化 Public Key
+        emailjs.init("zovN2ceDxO5PBgCrk"); 
+
+        
+        // 2. 调用 send 方法发送邮件
+        emailjs.send(
+            'service_gq4unos', 
+            'template_efmvjfu', 
+            data
+        )
+        .then(function(response) {
+            // console.log('邮件发送成功！', response.status, response.text);
+            form.reset();
+            alert('感谢您的留言，我们将尽快回复！');
+        }, function(error) {
+            // console.error('邮件发送失败：', error);
+            alert('发送失败，请稍后重试或检查网络。');
+        });
         
         // 模拟API调用
         setTimeout(function() {
-            showNotification('预约请求已提交！我们将通过邮件确认。');
+            // showNotification('预约请求已提交！我们将通过邮件确认。');
             form.reset();
-            
-            // 重置日历选择
-            document.querySelectorAll('.calendar-day.selected').forEach(function(el) {
-                el.classList.remove('selected');
-            });
-            
-            // 重置时间选择
-            document.querySelectorAll('.time-option').forEach(function(opt) {
-                opt.classList.remove('selected');
-            });
-            document.querySelector('.time-option[data-time="11:00"]').classList.add('selected');
-            document.getElementById('selectedTime').value = '11:00';
             
         }, 1500);
     });

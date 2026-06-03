@@ -74,35 +74,35 @@
                     <div class="contact-form-wrapper">
                         <h2 class="contact-form-title">Send a Message</h2>
                         <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label" for="fullName">Full Name</label>
-                                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="email">Email Address</label>
-                                    <input type="email" id="email" name="email" class="form-input" placeholder="name@company.com" required>
-                                </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="user_name">Full Name</label>
+                                <input type="text" id="user_name" name="user_name" class="form-input" placeholder="Enter your name" required>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label class="form-label" for="user_email">Email Address</label>
+                                <input type="email" id="user_email" name="user_email" class="form-input" placeholder="Enter your email" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="inquiryType">Inquiry Type</label>
-                                <select id="inquiryType" name="inquiryType" class="form-select" required>
-                                    <option value="quotation" selected>Product Quotation</option>
-                                    <option value="technical">Technical Support</option>
-                                    <option value="partnership">Partnership Inquiry</option>
-                                    <option value="general">General Inquiry</option>
-                                </select>
+                                <label class="form-label" for="user_phone">Phone</label>
+                                <input type="phone" id="user_phone" name="user_phone" class="form-input" placeholder="Enter your phone">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" for="message">Technical Requirements / Message</label>
-                                <textarea id="message" name="message" class="form-textarea" placeholder="Describe your specific equipment needs or inquiry details..." required></textarea>
+                                <label class="form-label" for="user_country">Country</label>
+                                <input type="country" id="user_country" name="user_country" class="form-input" placeholder="Enter your country" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="user_message">Technical Requirements / Message</label>
+                                <textarea id="user_message" name="user_message" class="form-textarea" placeholder="Describe your specific equipment needs or inquiry details..." required></textarea>
                             </div>
                             <button type="submit" class="submit-btn">
-                                Submit Inquiry
+                                Submit
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
                                 </svg>
                             </button>
+
                         </form>
                     </div>
 
@@ -326,6 +326,8 @@
     <!-- ============================================
          JavaScript 引入
          ============================================ -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/contact.js"></script>
 </body>
