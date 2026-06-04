@@ -457,13 +457,14 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--bg-white);
+
     background-color: #04040494;
     transition: box-shadow var(--transition-normal);
 }
 
 .navbar.scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+   
 }
 
 .navbar-container {
@@ -571,14 +572,14 @@ button {
 }
 
 .footer-brand {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
 
 }
 
 .footer-brand-container img {
-    height: 40px;
-    width: 40px;
+    height: 0;
+    width: 0;
 }
 
 .footer-contact {
