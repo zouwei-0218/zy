@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化首页特有功能
     initHeroAnimations();
     initServiceCards();
+    initProjectVideos();
+    // initContactForm();
 });
 
 /**
@@ -84,6 +86,60 @@ function initServiceCards() {
 
 /**
  * ============================================
+ * 项目视频卡片交互
+ * ============================================
+ * 处理项目卡片的视频播放/暂停功能
+ */
+function initProjectVideos() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(function(card) {
+        const video = card.querySelector('video');
+        const playBtn = card.querySelector('.video-play-btn');
+        
+        if (!video || !playBtn) return;
+        
+        // 点击播放按钮切换视频状态
+        playBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            if (video.paused) {
+                // 暂停其他所有视频
+                document.querySelectorAll('.project-card video').forEach(function(v) {
+                    if (v !== video) {
+                        v.pause();
+                    }
+                });
+                video.play();
+                playBtn.style.opacity = '0';
+            } else {
+                video.pause();
+                playBtn.style.opacity = '1';
+            }
+        });
+        
+        // 鼠标悬停时显示/隐藏播放按钮
+        card.addEventListener('mouseenter', function() {
+            if (video.paused) {
+                playBtn.style.opacity = '1';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (!video.paused) {
+                playBtn.style.opacity = '0';
+            }
+        });
+        
+        // 视频播放结束时显示播放按钮
+        video.addEventListener('ended', function() {
+            playBtn.style.opacity = '1';
+        });
+    });
+}
+
+/**
+ * ============================================
  * 视差滚动效果（可选）
  * ============================================
  * 为Hero背景添加轻微的视差效果
@@ -119,3 +175,5 @@ function initParallaxEffect() {
 
 // 如果需要启用视差效果，取消下面的注释
 // initParallaxEffect();
+
+

@@ -666,6 +666,51 @@ button {
 }
 
 /* ============================================
+ * 8. 表单按钮样式
+ * ============================================
+ */
+.form-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: space-between;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    width: fit-content;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.submit-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.submit-btn.secondary-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border: 1px solid var(--primary-color);
+}
+
+.submit-btn.secondary-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================================
  * 9. 响应式设计
  * ============================================
  * 移动端适配样式

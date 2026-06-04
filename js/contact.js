@@ -14,113 +14,16 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化联系我们页特有功能
-    initContactForm();
+    // initContactForm();
     initSocialButtons();
 });
 
-/**
- * ============================================
- * 联系表单功能
- * ============================================
- * 处理表单验证和提交
- */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    
-    if (!form) return;
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // 获取表单数据
-        let formData = new FormData(form);
-        let data = Object.fromEntries(formData.entries());
-        
-        // 验证必填字段
-        let isValid = true;
-        const requiredFields = ['user_name', 'user_email', 'user_country', 'user_message'];
-        
-        requiredFields.forEach(function(field) {
-            if (!data[field] || data[field].trim() === '') {
-                isValid = false;
-                const input = form.querySelector('[name="' + field + '"]');
-                if (input) {
-                    input.style.borderColor = '#dc2626';
-                    setTimeout(function() {
-                        input.style.borderColor = '';
-                    }, 3000);
-                }
-            }
-        });
-        
-        // 验证邮箱格式
-        if (data.email && !FoshanFlyUtils.FormValidator.isEmail(data.email)) {
-            isValid = false;
-            const emailInput = document.getElementById('email');
-            if (emailInput) {
-                emailInput.style.borderColor = '#dc2626';
-                setTimeout(function() {
-                    emailInput.style.borderColor = '';
-                }, 3000);
-            }
-        }
-        
-        if (!isValid) {
-            showNotification('请填写所有必填字段');
-            return;
-        }
-        
-        // 模拟提交
-        // 1. 初始化 Public Key
-        emailjs.init("zovN2ceDxO5PBgCrk"); 
 
-        // 监听表单提交事件
-        data.user_from = "中亿家具";
-        
-        // 调试：打印发送的数据
-        // console.log('发送的数据:', data);
-        
-        // 2. 调用 send 方法发送邮件
-        emailjs.send(
-            'service_gq4unos', 
-            'template_saszc21', 
-            data
-        )
-        .then(function(response) {
-            // console.log('邮件发送成功！', response.status, response.text);
-            form.reset();
-            alert('感谢您的留言，我们将尽快回复！');
-        }, function(error) {
-            // console.error('邮件发送失败：', error);
-            alert('发送失败，请稍后重试或检查网络。');
-        });
-
-        
-        // 模拟API调用
-        // setTimeout(function() {
-        //     showNotification('咨询已提交！我们会尽快与您联系。');
-        //     form.reset();
-        // }, 1500);
-    });
-    
-    // 输入时移除错误样式
-    const inputs = form.querySelectorAll('.form-input, .form-textarea, .form-select');
-    inputs.forEach(function(input) {
-        input.addEventListener('input', function() {
-            this.style.borderColor = '';
-        });
-        
-        input.addEventListener('change', function() {
-            this.style.borderColor = '';
-        });
-    });
-}
-
-/**
- * ============================================
- * 社交分享按钮功能
- * ============================================
- */
+// /**
+//  * ============================================
+//  * 社交分享按钮功能
+//  * ============================================
+//  */
 function initSocialButtons() {
     const shareBtn = document.querySelector('.social-btn[aria-label="分享"]');
     const printBtn = document.querySelector('.social-btn[aria-label="打印"]');

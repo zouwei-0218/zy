@@ -148,32 +148,6 @@
     box-shadow: 0 0 0 3px rgba(26, 95, 158, 0.1);
 }
 
-.submit-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-md) var(--space-xl);
-    background-color: var(--primary-color);
-    color: var(--bg-white);
-    border: none;
-    border-radius: var(--radius-sm);
-    font-size: var(--text-base);
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
-    width: fit-content;
-    margin-left: auto;
-}
-
-.submit-btn:hover {
-    background-color: var(--primary-dark);
-}
-
-.submit-btn svg {
-    width: 18px;
-    height: 18px;
-}
-
 /* ============================================
  * 4. 联系详情侧边栏
  * ============================================
