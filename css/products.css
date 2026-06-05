@@ -358,7 +358,6 @@
 .modal-close svg {
     width: 18px;
     height: 18px;
-    color: #1a5f9e;
 }
 
 .modal-content {
@@ -416,7 +415,7 @@
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-md) var(--space-lg);
-    background-color: #1a5f9e;
+    background-color: #25d366;
     color: white;
     border: none;
     border-radius: var(--radius-sm);
@@ -456,15 +455,6 @@
     color: var(--primary-color);
 }
 
-.modal-contact-list .modal-contact-item:nth-child(1) svg,
-.modal-contact-list .modal-contact-item:nth-child(2) svg {
-    color: #ffffff;
-}
-
-.modal-contact-list .modal-contact-item:nth-child(3) svg {
-    color: #f0f2f5;
-}
-
 /* 右侧表单区域 */
 .modal-right {
     padding: var(--space-3xl);
@@ -478,8 +468,8 @@
 }
 
 .modal-form .form-row {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-md);
 }
 
@@ -488,7 +478,7 @@
 }
 
 .modal-form .form-input {
-    width: 100% !important;
+    width: 100%;
     padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 32px);
     font-size: var(--text-sm);
     border: none;

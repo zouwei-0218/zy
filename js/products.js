@@ -246,6 +246,18 @@ function initSpeakToUsModal() {
             event.preventDefault();
             submitModalForm();
         });
+        
+        // 输入时移除错误样式
+        const inputs = form.querySelectorAll('.form-input, .form-textarea, .form-select');
+        inputs.forEach(function(input) {
+            input.addEventListener('input', function() {
+                this.style.borderColor = '';
+            });
+            
+            input.addEventListener('change', function() {
+                this.style.borderColor = '';
+            });
+        });
     }
 }
 
@@ -276,37 +288,74 @@ function closeSpeakToUsModal() {
  */
 function submitModalForm() {
     const form = document.getElementById('modalContactForm');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+    const originalText = submitBtn?.innerHTML || 'Submit';
     
     if (!form) return;
+
+    // 获取表单数据
+    let formData = new FormData(form);
+    let data = Object.fromEntries(formData.entries());
     
-    // 收集表单数据
-    const formData = new FormData(form);
-    const data = {};
-    formData.forEach(function(value, key) {
-        data[key] = value;
+    // 验证必填字段
+    let isValid = true;
+    const requiredFields = ['user_name', 'user_email', 'user_country', 'user_message'];
+    requiredFields.forEach(function(field) {
+        if (!data[field] || data[field].trim() === '') {
+            isValid = false;
+            const input = form.querySelector('[name="' + field + '"]');
+            if (input) {
+                input.style.borderColor = '#dc2626';
+                setTimeout(function() {
+                    input.style.borderColor = '';
+                }, 3000);
+            }
+        }
     });
     
-    // 显示提交中状态
-    const submitBtn = form.querySelector('.modal-submit-btn');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle class="animate-spin" cx="12" cy="12" r="10"/></svg> Sending...';
-    submitBtn.disabled = true;
+    // 验证邮箱格式
+    if (data.user_email && !FoshanFlyUtils.FormValidator.isEmail(data.user_email)) {
+        isValid = false;
+        const emailInput = document.getElementById('user_email');
+        if (emailInput) {
+            emailInput.style.borderColor = '#dc2626';
+            setTimeout(function() {
+                emailInput.style.borderColor = '';
+            }, 3000);
+        }
+    }
     
-    // 模拟提交（实际项目中可以使用 emailjs 发送）
-    setTimeout(function() {
-        // 重置表单
-        form.reset();
-        
-        // 恢复按钮状态
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        
-        // 显示成功提示
-        showNotification('Message sent successfully! We will contact you within 48 hours.');
-        
-        // 关闭弹窗
-        setTimeout(function() {
+    if (!isValid) {
+        showNotification('请填写所有必填字段');
+        return;
+    }
+    
+    // 禁用按钮防止重复提交
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+    }
+    
+    // 设置来源
+    data.user_from = "中亿家具";
+
+    console.log(data);
+     // 1. 初始化 Public Key
+    emailjs.init("zovN2ceDxO5PBgCrk"); 
+    // 调用 emailjs 发送邮件
+    emailjs.send('service_gq4unos', 'template_saszc21', data)
+        .then(function(response) {
+            alert('感谢您的留言，我们将尽快回复！');
+            form.reset();
             closeSpeakToUsModal();
-        }, 2000);
-    }, 1500);
+        }, function(error) {
+            // alert(error.message);
+            alert('发送失败，请稍后重试或检查网络。');
+        })
+        .finally(function() {
+            if (submitBtn) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
 }

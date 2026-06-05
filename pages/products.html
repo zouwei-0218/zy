@@ -411,6 +411,7 @@
          ============================================ -->
     <script src="../js/common.js"></script>
     <script src="../js/products.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- ============================================
          Speak to Us 弹窗
@@ -477,48 +478,46 @@
                 <!-- 右侧表单区域 -->
                 <div class="modal-right">
                     <form class="modal-form" id="modalContactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" name="user_name" class="form-input" placeholder="Your Name*" required>
-                                <span class="input-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="user_email" class="form-input" placeholder="Your Email*" required>
-                                <span class="input-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                        <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                                    </svg>
-                                </span>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" name="user_name" class="form-input" placeholder="Your Name*" required>
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </span>
                         </div>
                         
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="tel" name="user_phone" class="form-input" placeholder="Your Phone">
-                                <span class="input-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="user_country" class="form-input" placeholder="Your Country*" required>
-                                <span class="input-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
-                                </span>
-                            </div>
+                        <div class="form-group">
+                            <input type="email" name="user_email" class="form-input" placeholder="Your Email*" required>
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </span>
                         </div>
                         
-                        <div class="form-group full-width">
+                        <div class="form-group">
+                            <input type="tel" name="user_phone" class="form-input" placeholder="Your Phone">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="user_country" class="form-input" placeholder="Your Country*" required>
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </span>
+                        </div>
+                        
+                        <div class="form-group">
                             <textarea name="user_message" class="form-textarea" placeholder="Just share your project details, current stage, floor plan, or the products you are looking for..." required></textarea>
                         </div>
                         
