@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollEffects();
     initSmoothScroll();
-    initContactForm();
-    toWhatsApp()
+    // initContactForm();
+    // toWhatsApp()
 });
 
 /**
@@ -39,6 +39,7 @@ function initNavbar() {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
+
         }
     });
     
@@ -52,9 +53,7 @@ function toWhatsApp(){
     window.open('https://wa.me/message/5Z5VATVJXTD2C1', '_blank')
 }
 
-function openNewWindow() {
-    window.open('https://example.com', '_blank');
-}
+
 
 
 /**
@@ -360,7 +359,6 @@ function initContactForm() {
         // 验证必填字段
         let isValid = true;
         const requiredFields = ['user_name', 'user_email', 'user_country', 'user_message'];
-        
         requiredFields.forEach(function(field) {
             if (!data[field] || data[field].trim() === '') {
                 isValid = false;

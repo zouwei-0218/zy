@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCategoryFilter();
     initProductCards();
     initPagination();
+    initSpeakToUsModal();
 });
 
 /**
@@ -218,4 +219,94 @@ function showNotification(message) {
             notification.remove();
         }, 300);
     }, 2000);
+}
+
+/**
+ * ============================================
+ * Speak to Us 弹窗功能
+ * ============================================
+ * 处理弹窗的打开、关闭和表单提交
+ */
+function initSpeakToUsModal() {
+    const modal = document.getElementById('speakToUsModal');
+    const form = document.getElementById('modalContactForm');
+    
+    // 点击蒙版关闭弹窗
+    if (modal) {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeSpeakToUsModal();
+            }
+        });
+    }
+    
+    // 表单提交处理
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            submitModalForm();
+        });
+    }
+}
+
+/**
+ * 打开弹窗
+ */
+function openSpeakToUsModal() {
+    const modal = document.getElementById('speakToUsModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * 关闭弹窗
+ */
+function closeSpeakToUsModal() {
+    const modal = document.getElementById('speakToUsModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+/**
+ * 提交表单
+ */
+function submitModalForm() {
+    const form = document.getElementById('modalContactForm');
+    
+    if (!form) return;
+    
+    // 收集表单数据
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach(function(value, key) {
+        data[key] = value;
+    });
+    
+    // 显示提交中状态
+    const submitBtn = form.querySelector('.modal-submit-btn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle class="animate-spin" cx="12" cy="12" r="10"/></svg> Sending...';
+    submitBtn.disabled = true;
+    
+    // 模拟提交（实际项目中可以使用 emailjs 发送）
+    setTimeout(function() {
+        // 重置表单
+        form.reset();
+        
+        // 恢复按钮状态
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // 显示成功提示
+        showNotification('Message sent successfully! We will contact you within 48 hours.');
+        
+        // 关闭弹窗
+        setTimeout(function() {
+            closeSpeakToUsModal();
+        }, 2000);
+    }, 1500);
 }

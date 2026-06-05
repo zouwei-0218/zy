@@ -110,7 +110,7 @@
                         <div class="sidebar-cta">
                             <h4 class="sidebar-cta-title">Need a custom solution?</h4>
                             <p class="sidebar-cta-text">Our engineers can design bespoke automation systems tailored to your facility.</p>
-                            <button class="sidebar-cta-btn" onclick="window.location.href='contact.html'">Speak to Us</button>
+                            <button class="sidebar-cta-btn" onclick="openSpeakToUsModal()">Speak to Us</button>
                         </div>
                     </aside>
 
@@ -411,5 +411,127 @@
          ============================================ -->
     <script src="../js/common.js"></script>
     <script src="../js/products.js"></script>
+
+    <!-- ============================================
+         Speak to Us 弹窗
+         ============================================ -->
+    <div class="modal-overlay" id="speakToUsModal">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeSpeakToUsModal()" aria-label="关闭弹窗">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <div class="modal-content">
+                <!-- 左侧信息区域 -->
+                <div class="modal-left">
+                    <div class="modal-brand">
+                        <img src="../static/images/logo1.png" width="40" height="40" alt="Foshan ZY Furniture Logo"/>
+                        <span>Foshan ZY Furniture</span>
+                    </div>
+                    
+                    <h2 class="modal-title">Send Us Your Floor Plan for a Preliminary Project Review</h2>
+                    
+                    <p class="modal-description">
+                        Planning a restaurant, café, bar, or hospitality project? Share your floor plan and project requirements with us. Our team will review your project and contact you within 48 hours.
+                    </p>
+                    
+                    <p class="modal-description">
+                        We offer end-to-end solutions covering layout planning, 3D visualizations, furniture sourcing, lighting selection, and building material procurement—helping you create a functional, attractive, and cost-effective commercial space.
+                    </p>
+                    
+                    <div class="modal-contact-info">
+                        <button class="modal-whatsapp-btn" onclick="toWhatsApp()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                            </svg>
+                            WhatsApp Us
+                        </button>
+                        
+                        <div class="modal-contact-list">
+                            <div class="modal-contact-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <span>+86 18923123804</span>
+                            </div>
+                            <div class="modal-contact-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                                <span>sales@georgegroupchina.com</span>
+                            </div>
+                            <div class="modal-contact-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                                <span>sales@georgegroupchina.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧表单区域 -->
+                <div class="modal-right">
+                    <form class="modal-form" id="modalContactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="user_name" class="form-input" placeholder="Your Name*" required>
+                                <span class="input-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="user_email" class="form-input" placeholder="Your Email*" required>
+                                <span class="input-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                        <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" name="user_phone" class="form-input" placeholder="Your Phone">
+                                <span class="input-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="user_country" class="form-input" placeholder="Your Country*" required>
+                                <span class="input-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <textarea name="user_message" class="form-textarea" placeholder="Just share your project details, current stage, floor plan, or the products you are looking for..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="modal-submit-btn">
+                            Speak to Us
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -294,7 +294,282 @@
 }
 
 /* ============================================
- * 6. 响应式设计
+ * 7. Speak to Us 弹窗样式
+ * ============================================
+ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-dark);
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color var(--transition-fast);
+}
+
+.modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-close svg {
+    width: 18px;
+    height: 18px;
+    color: #1a5f9e;
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* 左侧信息区域 */
+.modal-left {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: var(--space-3xl);
+    color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-2xl);
+}
+
+.modal-brand img {
+    width: 48px;
+    height: 48px;
+}
+
+.modal-brand span {
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.modal-title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+    line-height: var(--leading-tight);
+}
+
+.modal-description {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    opacity: 0.9;
+    margin-bottom: var(--space-md);
+}
+
+.modal-contact-info {
+    margin-top: auto;
+}
+
+.modal-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    background-color: #1a5f9e;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: var(--space-xl);
+    transition: background-color var(--transition-fast);
+}
+
+.modal-whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+.modal-whatsapp-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.modal-contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    opacity: 0.8;
+}
+
+.modal-contact-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+}
+
+.modal-contact-list .modal-contact-item:nth-child(1) svg,
+.modal-contact-list .modal-contact-item:nth-child(2) svg {
+    color: #ffffff;
+}
+
+.modal-contact-list .modal-contact-item:nth-child(3) svg {
+    color: #f0f2f5;
+}
+
+/* 右侧表单区域 */
+.modal-right {
+    padding: var(--space-3xl);
+    background-color: var(--bg-white);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.modal-form .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.modal-form .form-group {
+    position: relative;
+}
+
+.modal-form .form-input {
+    width: 100% !important;
+    padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 32px);
+    font-size: var(--text-sm);
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+    border-radius: 0;
+    background-color: transparent;
+    transition: border-color var(--transition-fast);
+}
+
+.modal-form .form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+.modal-form .form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.modal-form .input-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.modal-form .input-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-form .form-textarea {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--text-sm);
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    resize: vertical;
+    min-height: 200px;
+    font-family: inherit;
+    transition: border-color var(--transition-fast);
+}
+
+.modal-form .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.modal-form .form-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.modal-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.modal-submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.modal-submit-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ============================================
+ * 8. 响应式设计
  * ============================================
  */
 

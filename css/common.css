@@ -501,16 +501,14 @@ button {
     color: white;
     padding: var(--space-sm) 0;
     position: relative;
-
-    justify-content: center;
-    
+    justify-content: center;    
     /* font-weight: bold; */
 }
 
-.navbar-nav a:hover,
+/* .navbar-nav a:hover,
 .navbar-nav a.active {
     /* 鼠标滑过和选中时字体颜色不变 */
-}
+/* } */
 
 .navbar-nav a:hover::after,
 .navbar-nav a.active::after {
