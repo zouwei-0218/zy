@@ -15,8 +15,8 @@
  */
 :root {
     /* 主色调 - 品牌蓝色 */
-    --primary-color: #1a5f9e;
-    --primary-dark: #124a7d;
+    --primary-color: #00497a;
+    --primary-dark: #003e68;
     --primary-light: #2d7ab8;
     
     /* 辅助色 */
@@ -172,9 +172,9 @@ button {
 /* 容器 */
 .container {
     width: 100%;
-    max-width: var(--container-max);
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 var(--space-lg);
+    padding: 0 calc(20% - 24px);
 }
 
 .container-narrow {
@@ -718,6 +718,13 @@ button {
 @media (max-width: 991px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 平板设备 (小于 992px) */
+@media (max-width: 991px) {
+    .container {
+        padding: 0 calc(10% - 12px);
     }
 }
 

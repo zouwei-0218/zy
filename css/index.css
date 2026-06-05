@@ -24,9 +24,8 @@
 
 .hero-content {
     width: 100%;
-    max-width: var(--container-max);
     margin: 0 auto;
-    padding: var(--space-xl);
+    padding: var(--space-xl) calc(20% - 24px);
     color: var(--bg-white);
 }
 
@@ -579,6 +578,10 @@
 
 /* 平板设备 */
 @media (max-width: 991px) {
+    .hero-content {
+        padding: var(--space-xl) calc(10% - 12px);
+    }
+    
     .hero-title {
         font-size: var(--text-4xl);
     }
@@ -616,6 +619,10 @@
 
 /* 移动设备 */
 @media (max-width: 767px) {
+    .hero-content {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
     .hero {
         min-height: auto;
         padding: calc(70px + var(--space-2xl)) 0 var(--space-2xl);

@@ -43,9 +43,12 @@
 }
 
 .booking-container {
-    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+    max-width: 1200px;
     margin: 0 auto;
-    
+    align-items: start;
 }
 
 .booking-card {
@@ -169,7 +172,7 @@
 .submit-btn {
     width: 100%;
     padding: var(--space-lg);
-    background-color: #1e40af;
+    background-color: var(--primary-color);
     color: var(--bg-white);
     border: none;
     border-radius: 8px;
@@ -184,7 +187,7 @@
 }
 
 .submit-btn:hover {
-    background-color: #1e3a8a;
+    background-color: var(--primary-dark);
 }
 
 /* ============================================
@@ -237,6 +240,14 @@
  * ============================================
  */
 
+/* 平板设备 */
+@media (max-width: 991px) {
+    .booking-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
 /* 移动设备 */
 @media (max-width: 767px) {
     .book-hero {
@@ -249,7 +260,8 @@
     
     .booking-container {
         max-width: 100%;
-        padding: 0 var(--space-lg);
+        padding: 0 var(--space-md);
+        grid-template-columns: 1fr;
     }
     
     .booking-form-single {
