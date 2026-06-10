@@ -32,8 +32,8 @@
                     <rect width="40" height="40" rx="4" fill="#1a5f9e"/>
                     <path d="M10 20L20 10L30 20L20 30L10 20Z" fill="white"/>
                 </svg> -->
-                <img src="./static/images/logo1.png" alt="Foshan ZY Furniture Logo"/>
-                <span>Foshan ZY Furniture Co., Ltd.</span>
+                <img src="./static/images/index/logo1.png" alt="Foshan ZY Furniture Logo"/>
+                <span>Foshan ZY Furniture Limited</span>
             </a>
             
             <!-- 移动端菜单切换按钮 -->
@@ -50,7 +50,7 @@
                 <a href="./pages/products.html">PRODUCTS</a>
                 <a href="./pages/about.html">ABOUT US</a>
                 <a href="./pages/contact.html">CONATCT US</a>
-                <button class="btn btn-primary" onclick="toWhatsApp()">WhatsApp To Us</button>
+                <button class="btn btn-primary" onclick="toWhatsApp()">WhatsApp Us</button>
             </nav>
         </div>
     </header>
@@ -68,42 +68,514 @@
         <section class="hero">
             <div class="hero-content">
                 <!-- 小标签 -->
-                <span class="hero-badge">工程卓越 · 全球信赖</span>
+                <span class="hero-badge">We Know Business. We Know Service Better.</span>
                 
                 <!-- 主标题 -->
                 <h1 class="hero-title">
-                    引领工业自动化的<br>
-                    <span>核心技术</span>
+                    Elevating Spaces, Easing Sourcing                 
                 </h1>
                 
                 <!-- 描述文字 -->
                 <p class="hero-description">
-                    佛山市飞杨设备有限公司致力于为您提供最尖端的工业设备解决方案。我们以精度为本，为全球制造业注入动力。
+                    Specializing in hospitality and leisure furniture, we offer more than custom seating and tables—we deliver <span style="color: #d4db02;font-weight: bold; font-size: 25px;">one-stop solutions</span> that exceed expectations.<br/>
+                    From design development and manufacturing to global logistics, our end-to-end service gives you true peace of mind. Focus on running your business—leave the rest to us.
                 </p>
+               
                 
                 <!-- 操作按钮组 -->
                 <div class="hero-actions">
                     <a href="./pages/products.html" class="btn btn-white btn-lg">
-                        查看产品目录
+                        Explore Product Series 
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="./pages/about.html" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">
-                        了解我们
+                    <a href="./pages/about.html" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255, 255, 255, 0.5);">
+                        Learn About Us
                     </a>
                 </div>
             </div>
             
             <!-- 滚动提示 -->
             <div class="hero-scroll">
-                <span>向下滚动</span>
+                <span>Scroll Down</span>
             </div>
         </section>
 
+        <!-- ============================================
+             About Us 关于我们区域
+             ============================================
+             展示公司基本信息、优势和核心价值观
+             ============================================ -->
+        <section class="about-block">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- 左侧图片 -->
+                    <div class="about-image" data-animate>
+                            <img src="./static/images/index/about us.jpg" alt="工厂内部">
+                        </div>
+                    
+                    <!-- 右侧内容 -->
+                    <div class="about-content" data-animate>
+                        <h2 class="about-title-main">About Us</h2>
+                        <p class="about-subtitle">One-Stop Restaurant Solutions Provider</p>
+                        <p class="about-desc">
+                            Foshan ZY Furniture Co., Ltd. specializes in restaurant spaces. We are dedicated to providing global clients with comprehensive, turn-key solutions, seamlessly integrating design refinement, manufacturing, and global logistics.
+                        </p>
+                        
+                        <a href="./pages/about.html" class="btn btn-primary">
+                            了解更多
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             Products Gallery 产品展示区域
+             ============================================
+             展示公司产品分类，点击卡片打开咨询表单
+             ============================================ -->
+        <section class="products-gallery">
+            <div class="container">
+                <header class="products-gallery-header">
+                    <h2 class="products-gallery-title">One-Stop Products For Your Restaurant</h2>
+                    <p class="products-gallery-desc">Get all the materials you need in one place. Foshan ZY Furniture makes it easy to buy custom, top-quality building products. From single rooms to big projects, we help homeowners and builders worldwide.</p>
+                </header>
+                
+                <div class="products-gallery-grid">
+                    <!-- 产品卡片1 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="/static/images/index/index_product/axo series.png" alt="Cabinets & Wardrobes" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Sideboards</span>
+                        </div>
+                    </div>
+
+                    <!-- 产品卡片2 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="./static/images/index/index_product/Dining table.png" alt="Flooring & Stairs" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Dining Tables</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片3 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="./static/images/index/index_product/Dining chair.png" alt="Flooring & Stairs" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Dining Chairs</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片4 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="./static/images/index/index_product/light.png" alt="Lighting" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Lighting</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片5 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="./static/images/index/index_product/Booth.png" alt="Stones" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Booths</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- 产品卡片6 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="./static/images/index/index_product/Chester Leather Sofa.png" alt="Soft Furnishing" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Chester Leather Sofa</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片7 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ceramic%20tiles%20bathroom%20floor%20interior%20design&image_size=portrait_4_3" alt="Tiles" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Light Boxes</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片8 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=luxury%20sanitary%20ware%20bathtub%20bathroom%20design&image_size=portrait_4_3" alt="Sanitary Ware" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">LED Channel Letters</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片9 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20kitchen%20electrical%20appliances%20stainless%20steel&image_size=portrait_4_3" alt="Electrical Appliances" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Signboards</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品卡片10 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=metal%20glass%20partition%20modern%20office%20interior&image_size=portrait_4_3" alt="Metal & Glass" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Wall Art</span>
+                        </div>
+                    </div>
+
+                    <!-- 产品卡片11 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wooden%20wall%20panel%20modern%20interior%20cladding&image_size=portrait_4_3" alt="Wall Panel" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Home Decor</span>
+                        </div>
+                    </div>
+
+                    <!-- 产品卡片12 -->
+                    <div class="product-card" data-animate onclick="openGlobalModal()">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wooden%20wall%20panel%20modern%20interior%20cladding&image_size=portrait_4_3" alt="Wall Panel" loading="lazy">
+                        <div class="product-card-overlay">
+                            <span class="product-card-title">Wall Panel</span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CTA Section 咨询区域
+             ============================================
+             展示更多咨询方式，包含表单和WhatsApp按钮
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-image" data-animate>
+                        <img src="./static/images/index/CTA Section.jpg" alt="Building Section">
+                    </div>
+                    <div class="cta-text" data-animate>
+                        <h2 class="cta-title">
+                            Didn't See What You Need?
+                            <span class="cta-subtitle">We Have Much More!</span>
+                        </h2>
+                        <p class="cta-description">
+                            The products above are just a small sample of what we offer. Whether you're looking for standard items or custom designs, we've got everything your restaurant needs. Just let us know what you're looking for!
+                        </p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary btn-lg cta-button" onclick="openGlobalModal()">
+                                Share Your Needs
+                            </button>
+                            <button class="btn btn-outline btn-lg cta-button" onclick="toWhatsApp()">
+                                WhatsApp US
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             VIP Services VIP服务区域
+             ============================================
+             展示公司提供的VIP服务
+             ============================================ -->
+        <section class="vip-services">
+            <div class="container">
+                <div class="vip-header">
+                    <div class="vip-header-left">
+                        <h2 class="vip-title">10 VIP Services</h2>
+                        <h3 class="vip-subtitle">When You Visit Us in <span>China</span></h3>
+                    </div>
+                    <div class="vip-header-right">
+                        <p class="vip-description">
+                            We know business travel can be tiring. When you fly to China to visit, we want you to feel at home. From airport pick-up and hotel booking to personal translation, our team provides 10 free VIP services for our global clients. We take care of all the local details, so you can just enjoy the trip and focus on your restaurant project.
+                        </p>
+                        <button class="btn btn-secondary btn-lg" onclick="openGlobalModal()">
+                            Book My VIP Services
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="vip-grid">
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=VIP%20invitation%20letter%20business%20document&image_size=landscape_4_3" alt="VIP Invitation Letter" loading="lazy">
+                        <span class="vip-card-title">VIP Invitation Letter</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=private%20airport%20pickup%20service%20business&image_size=landscape_4_3" alt="Private Airport Pickup" loading="lazy">
+                        <span class="vip-card-title">Private Airport Pickup</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=hotel%20booking%20assistance%20luxury%20hotel&image_size=landscape_4_3" alt="Hotel Booking Assistance" loading="lazy">
+                        <span class="vip-card-title">Hotel Booking Assistance</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=gift%20shopping%20assistance%20chinese%20market&image_size=landscape_4_3" alt="Gift Shopping Assistance" loading="lazy">
+                        <span class="vip-card-title">Gift Shopping Assistance</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=local%20dining%20arrangement%20chinese%20cuisine&image_size=landscape_4_3" alt="Local Dining Arrangement" loading="lazy">
+                        <span class="vip-card-title">Local Dining Arrangement</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=personal%20translation%20support%20business%20meeting&image_size=landscape_4_3" alt="Personal Translation Support" loading="lazy">
+                        <span class="vip-card-title">Personal Translation Support</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=foreign%20currency%20exchange%20bank%20service&image_size=landscape_4_3" alt="Foreign Currency Exchange" loading="lazy">
+                        <span class="vip-card-title">Foreign Currency Exchange</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=mobile%20connectivity%20setup%20sim%20card&image_size=landscape_4_3" alt="Mobile Connectivity Setup" loading="lazy">
+                        <span class="vip-card-title">Mobile Connectivity Setup</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=daily%20private%20driver%20service%20business&image_size=landscape_4_3" alt="Daily Private Driver" loading="lazy">
+                        <span class="vip-card-title">Daily Private Driver</span>
+                    </div>
+                    <div class="vip-card" data-animate>
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=customized%20local%20tours%20chinese%20culture&image_size=landscape_4_3" alt="Customized Local Tours" loading="lazy">
+                        <span class="vip-card-title">Customized Local Tours</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             Work Process 工作流程区域
+             ============================================
+             展示公司项目流程步骤
+             ============================================ -->
+        <section class="work-process">
+            <div class="container">
+                <header class="process-header">
+                    <div class="process-header-left">
+                        <span class="process-tag">OUR WORK PROCESS</span>
+                        <h2 class="process-title">How We Build Your Project <span>Step by Step</span></h2>
+                    </div>
+                    <div class="process-header-right">
+                        <p class="process-description">
+                            We make the customization process simple and clear for you. From the first 3D design to final delivery, here are the 18 steps we take to turn your ideas into a finished home safely and on time.
+                        </p>
+                        <button class="btn btn-secondary btn-lg" onclick="openGlobalModal()">
+                            Contact Us
+                        </button>
+                    </div>
+                </header>
+                
+                <div class="process-grid">
+                    <!-- 第一行 -->
+                    <div class="process-card">
+                        <span class="process-number">01</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">3D Design Service</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">02</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">VIP Consultant Service</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">03</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20h9"/>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">On-site Measuring Guidance</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">04</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M19 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M5 10h14"/>
+                                <path d="M12 14v7"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Project Management</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">05</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Pricing & Budget Planning</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">06</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">One-stop Selection</span>
+                    </div>
+                    
+                    <!-- 第二行 -->
+                    <div class="process-card">
+                        <span class="process-number">07</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Professional Sales Services</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">08</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M19 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M5 9h14"/>
+                                <path d="M12 14v7"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Price Level Matching Proposals</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">09</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20V10"/>
+                                <path d="M18 20V4"/>
+                                <path d="M6 20v-6"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Integrated Specialized System</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">10</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 12h.01"/>
+                                <path d="M16.24 7.76a6 6 0 0 1 0 8.49"/>
+                                <path d="M11.76 7.76a6 6 0 0 0 0 8.49"/>
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Product Knowledge Expertise</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">11</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M19 19v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/>
+                                <path d="M5 9h14"/>
+                                <path d="M12 14v7"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Project Tracking Service</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">12</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Quality Assurance Services</span>
+                    </div>
+                    
+                    <!-- 第三行 -->
+                    <div class="process-card">
+                        <span class="process-number">13</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Standardized After-Sales</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">14</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7h-9"/>
+                                <path d="M14 17H5"/>
+                                <path d="M14 12H5"/>
+                                <path d="M21 18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Warehousing & Loading</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">15</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <path d="M12 2v4"/>
+                                <path d="M12 18v4"/>
+                                <path d="m4.93 4.93 2.83 2.83"/>
+                                <path d="m16.24 16.24 2.83 2.83"/>
+                                <path d="M2 12h4"/>
+                                <path d="M18 12h4"/>
+                                <path d="m6.34 17.66 2.83-2.83"/>
+                                <path d="m19.07 4.93-2.83 2.83"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">International Logistics</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">16</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Commitment In Case of Delay</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">17</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Service Guarantee</span>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-number">18</span>
+                        <div class="process-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="process-name">Customer Review Program</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         
-
         <!-- ============================================
              Projects  项目展示区域
              ============================================
@@ -120,8 +592,8 @@
                     <!-- 项目卡片1 -->
                     <div class="project-card" data-animate>
                         <div class="project-video">
-                            <video muted loop playsinline poster="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600">
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-robot-arm-welding-metal-42823-large.mp4" type="video/mp4">
+                            <video muted loop playsinline poster="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industrial%20robot%20arm%20welding%20metal%20factory%20automation&image_size=landscape_16_9">
+                                <source src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industrial%20robot%20arm%20welding%20metal%20factory%20automation&image_size=landscape_16_9" type="video/mp4">
                             </video>
                             <button class="video-play-btn" aria-label="播放视频">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -138,8 +610,8 @@
                     <!-- 项目卡片2 -->
                     <div class="project-card" data-animate>
                         <div class="project-video">
-                            <video muted loop playsinline poster="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600">
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-factory-machine-with-robot-arms-working-42831-large.mp4" type="video/mp4">
+                            <video muted loop playsinline poster="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=factory%20machine%20robot%20arms%20working%20industrial%20automation&image_size=landscape_16_9">
+                                <source src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=factory%20machine%20robot%20arms%20working%20industrial%20automation&image_size=landscape_16_9" type="video/mp4">
                             </video>
                             <button class="video-play-btn" aria-label="播放视频">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -156,8 +628,8 @@
                     <!-- 项目卡片3 -->
                     <div class="project-card" data-animate>
                         <div class="project-video">
-                            <video muted loop playsinline poster="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600">
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-robotic-arm-working-in-a-factory-42808-large.mp4" type="video/mp4">
+                            <video muted loop playsinline poster="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robotic%20arm%20working%20in%20factory%20automated%20manufacturing&image_size=landscape_16_9">
+                                <source src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robotic%20arm%20working%20in%20factory%20automated%20manufacturing&image_size=landscape_16_9" type="video/mp4">
                             </video>
                             <button class="video-play-btn" aria-label="播放视频">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -174,119 +646,9 @@
             </div>
         </section>
 
-        <!-- ============================================
-             About Us 关于我们区域
-             ============================================
-             展示公司基本信息、优势和核心价值观
-             ============================================ -->
-        <section class="about-block">
-            <div class="container">
-                <header class="about-header">
-                    <h2 class="about-title-main">About Us</h2>
-                    <p class="about-subtitle">专业的工业自动化解决方案供应商</p>
-                </header>
-                
-                <div class="about-grid">
-                    <!-- 左侧图片 -->
-                    <div class="about-image" data-animate>
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="工厂内部">
-                    </div>
-                    
-                    <!-- 右侧内容 -->
-                    <div class="about-content" data-animate>
-                        <p class="about-desc">
-                            佛山市飞杨设备有限公司是一家专注于工业自动化设备研发、制造和销售的高新技术企业。我们致力于为全球制造业提供智能化、高效化的生产解决方案。
-                        </p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">年行业经验</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">成功案例</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">30+</span>
-                                <span class="stat-label">国家覆盖</span>
-                            </div>
-                        </div>
-                        <a href="./pages/about.html" class="btn btn-primary">
-                            了解更多
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
 
-        <!-- ============================================
-             What We Do 服务区域
-             ============================================
-             展示公司的核心业务领域
-             使用卡片式布局，左侧大图+右侧两个小卡片
-             ============================================ -->
-        <section class="services">
-            <div class="container">
-                <!-- 区域标题 -->
-                <header class="services-header">
-                    <h2 class="services-title">What we do</h2>
-                </header>
-                
-                <!-- 服务卡片网格 -->
-                <div class="services-grid">
-                    <!-- 左侧大图卡片：工业机械臂 -->
-                    <div class="service-card-large" data-animate>
-                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800" 
-                             alt="工业机械臂" 
-                             class="service-image"
-                             loading="lazy">
-                    </div>
-                    
-                    <!-- 右侧上方卡片：协作机器人 -->
-                    <div class="service-card" data-animate>
-                        <div>
-                            <div class="service-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                    <path d="M2 17l10 5 10-5"/>
-                                    <path d="M2 12l10 5 10-5"/>
-                                </svg>
-                            </div>
-                            <h3 class="service-card-title">协作机器人</h3>
-                            <p class="service-card-desc">灵活部署，提升人机协同作业效率。</p>
-                        </div>
-                        <div class="service-card-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <!-- 右侧下方卡片：定制化产线 -->
-                    <div class="service-card" data-animate>
-                        <div>
-                            <div class="service-card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                    <line x1="8" y1="21" x2="16" y2="21"/>
-                                    <line x1="12" y1="17" x2="12" y2="21"/>
-                                </svg>
-                            </div>
-                            <h3 class="service-card-title">定制化产线</h3>
-                            <p class="service-card-desc">为您企业量身打造的全自动生产流程。</p>
-                        </div>
-                        <div class="service-card-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- ============================================
              Contact Us 联系我们区域

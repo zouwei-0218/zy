@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollEffects();
     initSmoothScroll();
-    // initContactForm();
-    // toWhatsApp()
 
     // 初始化固定浮动按钮和弹窗
     initFloatingButtons();
@@ -568,14 +566,14 @@ function initGlobalModal() {
                                         <rect x="2" y="4" width="20" height="16" rx="2"/>
                                         <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                                     </svg>
-                                    <span>sales@georgegroupchina.com</span>
+                                    <span>info@zyfurniture.com</span>
                                 </div>
-                                <div class="modal-contact-item">
+                                <div class="modal-contact-item" style="align-items: start;">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                        <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
                                     </svg>
-                                    <span>sales@georgegroupchina.com</span>
+                                    <span>No. 37 Xingye Road, Shunde District, Foshan City, Guangdong Province, China</span>
                                 </div>
                             </div>
                         </div>

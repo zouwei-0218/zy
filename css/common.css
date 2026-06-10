@@ -368,6 +368,7 @@ button {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: var(--bg-white);
+    border: 1px solid var(--primary-color);
 }
 
 .btn-white {
@@ -1171,9 +1172,10 @@ button {
 }
 
 .modal-contact-item svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     color: var(--primary-color);
+    flex-shrink: 0;
 }
 
 /* 右侧表单区域 */
