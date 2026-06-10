@@ -138,42 +138,6 @@ function initProjectVideos() {
     });
 }
 
-/**
- * ============================================
- * 视差滚动效果（可选）
- * ============================================
- * 为Hero背景添加轻微的视差效果
- */
-function initParallaxEffect() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-    
-    // 检查是否为触摸设备（触摸设备不启用视差效果）
-    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouchDevice) return;
-    
-    let ticking = false;
-    
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                const scrolled = window.pageYOffset;
-                const rate = scrolled * 0.3;
-                
-                // 仅当元素在视口内时应用效果
-                if (scrolled < window.innerHeight) {
-                    hero.style.backgroundPositionY = 'calc(50% + ' + rate + 'px)';
-                }
-                
-                ticking = false;
-            });
-            
-            ticking = true;
-        }
-    });
-}
-
-// 如果需要启用视差效果，取消下面的注释
-// initParallaxEffect();
+// 视差滚动效果函数已移除（未使用）
 
 

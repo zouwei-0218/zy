@@ -14,7 +14,7 @@
 .cases-header {
     padding: calc(70px + var(--space-3xl)) 0 var(--space-2xl);
     background: linear-gradient(135deg, rgba(13, 74, 124, 0.9) 0%, rgba(26, 95, 158, 0.85) 100%),
-                url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920') center/cover no-repeat;
+                url('../static/images/case/cases-header.webp') center/cover no-repeat;
     color: var(--bg-white);
 }
 

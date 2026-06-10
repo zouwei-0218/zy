@@ -256,7 +256,7 @@ function initFormValidation() {
         
         // 模拟API调用
         setTimeout(function() {
-            // showNotification('预约请求已提交！我们将通过邮件确认。');
+            
             form.reset();
             
         }, 1500);

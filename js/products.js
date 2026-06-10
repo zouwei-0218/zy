@@ -117,16 +117,16 @@ const products = {
  * ============================================
  * DOM加载完成后的初始化
  * ============================================
+ * 页面加载完成后执行的初始化逻辑
  */
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化产品页特有功能
-    initCategoryFilter();
     initProductCards();
     initPagination();
-    // initSpeakToUsModal();
     
     // 动态加载分类和初始产品
     loadCategories();
+    
     // 默认加载第一个分类的产品
     const firstCategory = Object.keys(products)[0];
     if (firstCategory) {
@@ -217,8 +217,8 @@ function renderProducts(categoryName) {
             <div class="product-content">
                 <div class="product-category">${categoryName}</div>
                 <h3 class="product-name">${product.name}</h3>
-                <div class="product-material">Material: ${product.material}</div>
                 <div class="product-size">Size: ${product.size}</div>
+                <div class="product-material">Material: ${product.material}</div>                
                 <p class="product-description">${product.description}</p>
             </div>
         `;
@@ -249,45 +249,6 @@ function renderProducts(categoryName) {
     
     // 重新绑定产品卡片的点击事件
     initProductCards();
-}
-
-/**
- * ============================================
- * 分类筛选功能（保留原函数但不再使用）
- * ============================================
- * 处理产品分类的点击筛选
- */
-function initCategoryFilter() {
-    // 此函数已被动态加载分类功能替代
-    // 保留原函数以保持兼容性
-}
-
-/**
- * 筛选产品函数
- * @param {string} category - 分类名称
- */
-function filterProducts(category) {
-    // 获取所有产品卡片
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(function(card) {
-        const cardCategory = card.querySelector('.product-category').textContent;
-        
-        // 简单的淡入淡出效果
-        if (category === 'CNC Systems' || cardCategory === category) {
-            card.style.display = 'block';
-            setTimeout(function() {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 50);
-        } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(function() {
-                card.style.display = 'none';
-            }, 300);
-        }
-    });
 }
 
 /**

@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化联系我们页特有功能
     // initContactForm();
     initSocialButtons();
+    initRequiredFieldMarkers();
 });
 
 
@@ -24,6 +25,44 @@ document.addEventListener('DOMContentLoaded', function() {
 //  * 社交分享按钮功能
 //  * ============================================
 //  */
+/**
+ * ============================================
+ * 为必填字段的label添加红色星号标记
+ * ============================================
+ * 自动为所有带有required属性的input元素对应的label添加红色星号
+ */
+function initRequiredFieldMarkers() {
+    // 获取所有带有required属性的input元素
+    const requiredInputs = document.querySelectorAll('input[required], textarea[required]');
+    
+    requiredInputs.forEach(function(input) {
+        // 获取input的id属性
+        const inputId = input.getAttribute('id');
+        
+        // 如果input有id，找到对应的label
+        if (inputId) {
+            const label = document.querySelector('label[for="' + inputId + '"]');
+            
+            if (label) {
+                // 检查label是否已经有星号标记
+                if (!label.querySelector('.required-marker')) {
+                    // 创建星号元素
+                    const star = document.createElement('span');
+                    star.className = 'required-marker';
+                    star.textContent = '*';
+                    star.style.cssText = `
+                        color: #ff0000;
+                        margin-left: 4px;
+                    `;
+                    
+                    // 将星号添加到label末尾
+                    label.appendChild(star);
+                }
+            }
+        }
+    });
+}
+
 function initSocialButtons() {
     const shareBtn = document.querySelector('.social-btn[aria-label="分享"]');
     const printBtn = document.querySelector('.social-btn[aria-label="打印"]');

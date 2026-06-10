@@ -672,6 +672,9 @@ button {
     display: flex;
     gap: var(--space-md);
     justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--space-lg);
 }
 
 .submit-btn {
@@ -709,11 +712,18 @@ button {
     background-color: var(--primary-dark);
 }
 
+/* 联系详情区域的按钮容器 */
+.contact-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: flex-start;
+    margin-top: auto;
+    padding-top: var(--space-lg);
+}
+
 /* ============================================
  * 9. 响应式设计
- * ============================================
- * 移动端适配样式
- */
+ * ============================================ */
 
 /* 平板设备 (768px - 991px) */
 @media (max-width: 991px) {
